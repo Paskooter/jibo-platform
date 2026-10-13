@@ -60,7 +60,7 @@ Install the plugin at its full, immutable **40-character commit SHA**
 ([Hermes plugin documentation][plugins]):
 
 ```sh
-hermes plugins install https://github.com/Paskooter/jibo-platform --ref PLUGIN_RELEASE_SHA --enable
+hermes plugins install https://github.com/Paskooter/jibo-platform --ref fa793e41148b3ebdd41a5543732deba7217de146 --enable
 hermes plugins list
 ```
 
