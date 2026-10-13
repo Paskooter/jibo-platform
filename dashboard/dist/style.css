@@ -1,0 +1,405 @@
+.jibo-dashboard {
+  --jibo-bg: var(--background-base, #0b0b0c);
+  --jibo-text: var(--color-foreground, var(--midground, #f4f4f5));
+  --jibo-card-text: var(--color-card-foreground, var(--jibo-text));
+  --jibo-muted: var(--color-muted-foreground, color-mix(in srgb, var(--jibo-text) 72%, transparent));
+  --jibo-border: var(--color-border, color-mix(in srgb, var(--jibo-text) 22%, transparent));
+  --jibo-surface: var(--color-card, color-mix(in srgb, var(--jibo-text) 5%, var(--jibo-bg)));
+  --jibo-surface-raised: color-mix(in srgb, var(--jibo-surface) 88%, var(--jibo-text));
+  --jibo-surface-muted: var(--color-muted, color-mix(in srgb, var(--jibo-surface) 78%, var(--jibo-text)));
+  --jibo-input: color-mix(in srgb, var(--jibo-surface) 72%, var(--jibo-bg));
+  --jibo-primary: var(--color-primary, var(--jibo-text));
+  --jibo-primary-text: var(--color-primary-foreground, var(--jibo-bg));
+  --jibo-ring: var(--color-ring, var(--jibo-text));
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1180px;
+  min-width: 0;
+  padding: 20px;
+  color: var(--jibo-text);
+  font-family: var(
+    --theme-font-sans,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif
+  );
+  font-size: 1rem;
+  line-height: var(--theme-line-height, 1.45);
+}
+
+.jibo-dashboard,
+.jibo-dashboard *,
+.jibo-dashboard *::before,
+.jibo-dashboard *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.jibo-dashboard h1,
+.jibo-dashboard h2,
+.jibo-dashboard h3,
+.jibo-dashboard p {
+  margin: 0;
+}
+
+.jibo-dashboard h1,
+.jibo-dashboard h2,
+.jibo-dashboard h3,
+.jibo-dashboard strong {
+  color: var(--jibo-card-text);
+  font-weight: 650;
+}
+
+.jibo-dashboard h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.jibo-dashboard h2 {
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.jibo-dashboard h3 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.jibo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.jibo-header > div {
+  min-width: 0;
+}
+
+.jibo-header p {
+  margin-top: 7px;
+}
+
+.jibo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.jibo-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--jibo-border);
+  border-radius: 10px;
+  padding: 18px;
+  background: var(--jibo-surface);
+  color: var(--jibo-card-text);
+}
+
+.jibo-muted,
+.jibo-note,
+.jibo-log-meta {
+  color: var(--jibo-muted) !important;
+  font-size: 0.86rem;
+}
+
+.jibo-note {
+  margin-top: 14px !important;
+  line-height: 1.5;
+}
+
+.jibo-button,
+.jibo-link-button {
+  min-height: 36px;
+  border: 1px solid var(--jibo-border);
+  border-radius: 7px;
+  background: var(--jibo-surface-raised);
+  color: var(--jibo-card-text);
+  cursor: pointer;
+  padding: 8px 13px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.jibo-button-primary {
+  border-color: var(--jibo-primary);
+  background: var(--jibo-primary);
+  color: var(--jibo-primary-text);
+}
+
+.jibo-button:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+.jibo-button:focus-visible,
+.jibo-link-button:focus-visible,
+.jibo-form input:focus-visible {
+  outline: 2px solid var(--jibo-ring);
+  outline-offset: 2px;
+}
+
+.jibo-button:disabled,
+.jibo-link-button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.jibo-link-button {
+  min-height: 0;
+  border-color: transparent;
+  background: transparent;
+  color: var(--jibo-text);
+  padding: 3px 0 3px 8px;
+  font-size: 0.82rem;
+}
+
+.jibo-link-button:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.jibo-error,
+.jibo-message {
+  border-radius: 7px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.jibo-error {
+  border: 1px solid #fca5a5;
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.jibo-message {
+  border: 1px solid var(--jibo-border);
+  background: var(--jibo-surface-raised);
+  color: var(--jibo-card-text);
+}
+
+.jibo-setup-states {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.4fr) minmax(0, 1fr);
+  gap: 8px 12px;
+  margin: 12px 0 20px;
+  font-size: 0.86rem;
+}
+
+.jibo-setup-states dt { font-weight: 650; }
+.jibo-setup-states dd { margin: 0; overflow-wrap: anywhere; }
+
+.jibo-device-list {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.jibo-device-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--jibo-border);
+  border-radius: 8px;
+  padding: 11px 12px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.jibo-device-row:hover,
+.jibo-device-selected {
+  border-color: var(--jibo-primary);
+  background: var(--jibo-surface-muted);
+}
+
+.jibo-device-row > div:first-child {
+  overflow: hidden;
+}
+
+.jibo-device-row strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jibo-device-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+}
+
+.jibo-model-select {
+  max-width: 190px;
+  padding: 3px 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.72rem;
+  font-family: inherit;
+}
+
+.jibo-model-select:disabled {
+  opacity: 0.6;
+}
+
+.jibo-status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #e2e8f0;
+  color: #1e293b !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.jibo-status-connected {
+  background: #bbf7d0;
+  color: #14532d !important;
+}
+
+.jibo-mono {
+  font-family: var(--theme-font-mono, "SFMono-Regular", Consolas, "Liberation Mono", monospace);
+  font-size: 0.8rem;
+}
+
+.jibo-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.jibo-form h3 {
+  margin-bottom: 2px;
+}
+
+.jibo-form label {
+  display: grid;
+  gap: 5px;
+  color: var(--jibo-card-text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.jibo-form input {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--jibo-border);
+  border-radius: 6px;
+  background: var(--jibo-input);
+  color: var(--jibo-card-text);
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.jibo-form input::placeholder {
+  color: var(--jibo-muted);
+  opacity: 0.85;
+}
+
+.jibo-form input[name="code"] {
+  letter-spacing: 0.14em;
+  font-family: var(--theme-font-mono, "SFMono-Regular", Consolas, "Liberation Mono", monospace);
+  font-weight: 700;
+}
+
+.jibo-form-inline {
+  display: grid;
+  grid-template-columns: minmax(84px, 0.35fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.jibo-details {
+  display: grid;
+  gap: 8px;
+  margin: 13px 0 20px;
+  color: var(--jibo-card-text);
+  font-size: 0.86rem;
+}
+
+.jibo-log-title {
+  border-top: 1px solid var(--jibo-border);
+  padding-top: 15px;
+}
+
+.jibo-log {
+  display: grid;
+  gap: 8px;
+  max-height: 560px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.jibo-log-entry {
+  border-left: 3px solid var(--jibo-primary);
+  padding: 8px 10px;
+  background: var(--jibo-surface-muted);
+  color: var(--jibo-card-text);
+}
+
+.jibo-log-meta {
+  margin-bottom: 4px;
+  font-family: var(--theme-font-mono, "SFMono-Regular", Consolas, "Liberation Mono", monospace);
+  overflow-wrap: anywhere;
+}
+
+.jibo-log-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.86rem;
+}
+
+.jibo-empty {
+  padding: 12px 0;
+  color: var(--jibo-muted) !important;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 920px) {
+  .jibo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .jibo-dashboard {
+    padding: 14px;
+  }
+
+  .jibo-header {
+    flex-direction: column;
+  }
+
+  .jibo-header .jibo-button {
+    width: 100%;
+  }
+
+  .jibo-card {
+    padding: 14px;
+  }
+
+  .jibo-form-inline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jibo-device-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .jibo-device-actions {
+    justify-content: space-between;
+  }
+}

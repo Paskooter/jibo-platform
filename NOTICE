@@ -1,0 +1,40 @@
+jibo-platform — licenses and attribution
+
+The host integration code is licensed under BSD-3-Clause (see LICENSE).
+Copyright (c) 2026, pasketti
+Source: https://github.com/Paskooter/jibo-platform
+
+This distribution contains host plugin code and selected documentation.
+It does not include robot firmware, native app/SDK implementations, raw
+animation catalogs, media assets or private configuration.
+Jibo and Hermes names identify interoperability, not endorsement by their owners.
+Dependencies are not vendored; retain each dependency's own license when
+redistributing it separately.
+
+MIT guide notice
+----------------
+The included agent-skills/jibo-hermes-integration/SKILL.md originally declares
+"author: Hermes Agent" and "license: MIT". Preserve those metadata and attribution.
+The selected references distributed with that guide remain under MIT as well.
+Copyright (c) 2026, jibo-platform guide contributors
+Original author metadata: Hermes Agent
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

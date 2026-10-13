@@ -1,0 +1,18 @@
+# Publication allowlist is enforced in tests/test_public_release.py.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.verification/
+*.egg-info/
+# Private local configuration, runtime data and generated robot catalogs.
+.env
+.env.*
+config.yaml
+auth.json
+state.db*
+*.log
+animdb.json
+expression_vocabulary.json
+plugins-backup/

@@ -1,0 +1,32 @@
+name: jibo-platform
+label: Jibo Robot
+kind: platform
+manifest_version: 1
+api_version: 1
+# Tested with Hermes 0.21.1; see README for the exact source commit.
+requires_hermes: "==0.21.1"
+version: 0.3.1
+description: >
+  Native Hermes gateway platform for one or more Jibo robots. Connects to the
+  custom Be bridge over a versioned WebSocket and keeps the archived ROM API as
+  an explicit mode=rom compatibility fallback. No Hermes Relay dependency.
+author: pasketti
+license: BSD-3-Clause
+homepage: https://github.com/Paskooter/jibo-platform
+tags:
+  - jibo
+  - native-bridge
+  - hermes
+  - rom
+  - robotics
+  - asr
+  - esml
+requires_env: []
+# Exact host-library versions used by this release's tests.
+python_dependencies:
+  - httpx==0.28.1
+  - websockets==15.0.1
+  - PyYAML==6.0.3
+  - fastapi==0.133.1
+  - Pillow==12.3.0
+  - aiohttp==3.14.3

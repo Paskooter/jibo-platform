@@ -1,0 +1,14 @@
+{
+  "name": "jibo-platform",
+  "label": "Jibo",
+  "description": "Native Jibo devices, capabilities, and Hermes chat activity",
+  "icon": "Link",
+  "version": "0.3.1",
+  "tab": {
+    "path": "/jibo",
+    "position": "after:skills"
+  },
+  "entry": "dist/index.js?hermes_v=0.3.1",
+  "css": "dist/style.css?hermes_v=0.3.1",
+  "api": "plugin_api.py"
+}
